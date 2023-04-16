@@ -210,8 +210,8 @@ namespace dsmr
       static constexpr char dm3[] = "dm3";
       static constexpr char GJ[] = "GJ";
       static constexpr char MJ[] = "MJ";
-      static constexpr char kvar[] = "kvar";
-      static constexpr char kvarh[] = "kvarh";
+      static constexpr char kvar[] = "kVAr";
+      static constexpr char kvarh[] = "kVArh";
     };
 
     const uint8_t GAS_MBUS_ID = DSMR_GAS_MBUS_ID;
@@ -352,21 +352,21 @@ namespace dsmr
  * LUX
  */
     /* Instantaneous reactive power L1 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l1, FixedValue, ObisId(1, 0, 23, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l1, FixedValue, ObisId(1, 0, 23, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L2 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l2, FixedValue, ObisId(1, 0, 43, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l2, FixedValue, ObisId(1, 0, 43, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L3 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l3, FixedValue, ObisId(1, 0, 63, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l3, FixedValue, ObisId(1, 0, 63, 7, 0), FixedField, units::kvar, units::kvar);
 
     /*
  * LUX
  */
     /* Instantaneous reactive power L1 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l1, FixedValue, ObisId(1, 0, 24, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l1, FixedValue, ObisId(1, 0, 24, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L2 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l2, FixedValue, ObisId(1, 0, 44, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l2, FixedValue, ObisId(1, 0, 44, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L3 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l3, FixedValue, ObisId(1, 0, 64, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l3, FixedValue, ObisId(1, 0, 64, 7, 0), FixedField, units::kvar, units::kvar);
 
     /* Device-Type */
     DEFINE_FIELD(gas_device_type, uint16_t, ObisId(0, GAS_MBUS_ID, 24, 1, 0), IntField, units::none);

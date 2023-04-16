@@ -405,7 +405,7 @@ namespace dsmr
           // passed '3' here (which is mandatory for "mode D"
           // communication according to 62956-21), so we also allow
           // that.
-          if (line_start + 3 >= line_end || (line_start[3] != '5' && line_start[3] != '3'))
+          if (line_start + 3 >= line_end || (line_start[3] != '5' && line_start[3] != '3' && line_start[3] != '9'))
             return res.fail("Invalid identification string", line_start);
           // Offer it for processing using the all-ones Obis ID, which
           // is not otherwise valid.
